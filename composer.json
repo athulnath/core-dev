@@ -11,12 +11,12 @@
     ],
     "require": {},
     "autoload": {
-        "psr-04": {
+        "psr-4": {
             "App\\" : "src/"
         }
     },
     "autoload-dev": {
-        "psr-04": {
+        "psr-4": {
             "Test\\" : "tests/"
         }
     }
