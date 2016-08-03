@@ -5,7 +5,7 @@
 
             <form id="login-form" class="form-horizontal" action="process.php">
                     <div class="form-group field-loginform-username required has-error">
-                        <label class="col-lg-1 control-label" for="loginform-username">Username</label>
+                         <label class="col-lg-1 control-label" for="loginform-username">Username</label>
                             <div class="col-lg-3">
                                 <input type="text" id="loginform-username" class="form-control" name="username" autofocus="">
                             </div>
@@ -42,9 +42,6 @@
 
             </form>
         </div>
-
-
-    </div>
 
     <?php require_once 'footer.php'; ?>
     

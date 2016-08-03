@@ -18,11 +18,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Shares core</a>
+                <a class="navbar-brand" href="/dashboard.php">Shares core</a>
                 </div>
                     <div id="w0-collapse" class="collapse navbar-collapse">
                         <ul id="w1" class="navbar-nav navbar-right nav">
-                            <li class="active"><a href="#">Login</a></li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-cog"></span> Settings<span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="location.settings.php">Location</a></li>
+                                <li><a href="index.settings.php">Index</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Other settings</li> 
+                                <li><a href="#">Manage Trial Period</a></li>
+                                <li><a href="#">View User Device Data</a></li>
+                              </ul>
+                        </li>
+                        <li class="active"><a href="index.php">Login</a></li>
                         </ul></div>
                     </div>
     </nav>
