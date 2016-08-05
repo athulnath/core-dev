@@ -24,6 +24,12 @@ class Dispatcher {
 			$this->_action = $action;
 		}
 
+		if(empty($controller) && empty($action)) {
+			$this->_controller = "Site";
+			$this->_action = "index";
+		}
+
+
 		$classname = "App\Controllers\\" . $this->_controller . "Controller";
 
 		$obj = new $classname();

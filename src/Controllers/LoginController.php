@@ -4,7 +4,8 @@ namespace App\Controllers;
 class LoginController {
 
 	public function login() {
-		echo "login...";
+		$username = filter_input(INPUT_POST, 'username');
+		$password = filter_input(INPUT_POST, 'password');
 	}
 }
  ?>
