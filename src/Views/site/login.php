@@ -1,7 +1,7 @@
 <div class="site-login">
     <h1>Login</h1>
 
-<form id="login-form" class="form-horizontal" action="process.php">
+<form id="login-form" class="form-horizontal" action="/?c=site&a=login" method="post">
         <div class="form-group field-loginform-username required has-error">
              <label class="col-lg-1 control-label" for="loginform-username">Username</label>
                 <div class="col-lg-3">

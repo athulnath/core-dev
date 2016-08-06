@@ -13,7 +13,7 @@ class Users {
 	}
 
 	public function getUser($username) {
-		return $this->_dbInstance->exec("SELECT * FROM sharemarket_core.user");
+		return $this->_dbInstance->exec("SELECT * FROM users");
 	}
 }
  ?>

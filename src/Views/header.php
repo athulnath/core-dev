@@ -34,6 +34,7 @@
                               </ul>
                         </li>
                         <li><a href="index.php">Login</a></li>
+                        <li><a href="/?c=site&a=logout">Logout</a></li>
                         </ul></div>
                     </div>
     </nav>

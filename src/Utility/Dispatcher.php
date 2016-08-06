@@ -17,11 +17,13 @@ class Dispatcher {
 		$action = filter_input(INPUT_GET, 'a', FILTER_SANITIZE_URL);
 
 		if(!empty($controller)) {
-			$this->_controller = $controller;
+			$this->_controller = ucfirst($controller);
 		}
 
 		if(!empty($action)) {
 			$this->_action = $action;
+		} else {
+			$this->_action = 'index';
 		}
 
 		if(empty($controller) && empty($action)) {

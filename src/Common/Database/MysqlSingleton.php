@@ -17,7 +17,7 @@ class MysqlSingleton {
 	}
 
 	public function init() {
-		$this->_conn = new \PDO("mysql:host=localhost;dbname=sharemarket_core", "root", "root");
+		$this->_conn = new \PDO("mysql:host=localhost;dbname=share_core_dev", "root", "root");
 		$this->_conn->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
 	}
 
@@ -26,7 +26,7 @@ class MysqlSingleton {
     	$stmt->execute();
     	// set the resulting array to associative
     	$stmt->setFetchMode(\PDO::FETCH_ASSOC); 
-    	return $stmt->fetchAll();
+    	return $stmt->fetch();
 	}
 
 }

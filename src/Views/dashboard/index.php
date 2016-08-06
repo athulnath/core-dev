@@ -1,6 +1,4 @@
-<?php require_once 'header.php'; ?>
-
-	<div class="row">
+<div class="row">
 	<div class="col-xs-12">
 		<div class="location-form">
 
@@ -166,5 +164,3 @@
     </div>
   </div>
 </div>
-
-<?php require_once 'footer.php'; ?>    
