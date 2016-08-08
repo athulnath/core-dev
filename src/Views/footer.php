@@ -9,6 +9,6 @@
 
     <script src="lib/jquery/dist/jquery.min.js""></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js""></script>
-    <!-- <script src="assets/js/app.min.js""></script> -->
+    <script src="assets/js/app.min.js""></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+<?php 
+use App\Helper\AuthenticationHelper;
+ ?>
+
 <!DOCTYPE html>
 <html lang="eng">
 <head>
@@ -22,6 +26,7 @@
                 </div>
                     <div id="w0-collapse" class="collapse navbar-collapse">
                         <ul id="w1" class="navbar-nav navbar-right nav">
+                        <?php if(AuthenticationHelper::isLoggedIn()) : ?>
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-cog"></span> Settings<span class="caret"></span></a>
                               <ul class="dropdown-menu">
@@ -33,8 +38,9 @@
                                 <li><a href="#">View User Device Data</a></li>
                               </ul>
                         </li>
-                        <li><a href="index.php">Login</a></li>
-                        <li><a href="/?c=site&a=logout">Logout</a></li>
+                        <?php endif; ?>
+                        <?php if(!AuthenticationHelper::isLoggedIn()) : ?><li><a href="index.php">Login</a></li><?php endif;?>
+                        <?php if(AuthenticationHelper::isLoggedIn()) : ?><li><a href="/?c=site&a=logout">Logout</a></li><?php endif; ?>
                         </ul></div>
                     </div>
     </nav>

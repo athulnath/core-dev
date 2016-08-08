@@ -11,5 +11,9 @@ class Location {
 		$this->_dbInstance = MysqlSingleton::getInstance();
 		$this->_dbInstance->init();
 	}
+
+	public function getLocations() {
+		return $this->_dbInstance->exec("select * from location");
+	}
 }
  ?>

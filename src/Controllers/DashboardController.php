@@ -1,6 +1,8 @@
 <?php 
 namespace App\Controllers;
 
+use App\Models\Location;
+use App\Models\Index;
 
 class DashboardController extends Controller {
 
@@ -10,7 +12,17 @@ class DashboardController extends Controller {
 	}
 
 	public function index() {
-		$this->render("index");
+
+		$locationModel = new Location();
+		$locations = $locationModel->getLocations();
+		$this->render("index", ["locations" => $locations]);
+	}
+
+	public function indices() {
+		$indexModel = new Index();
+		$loc = filter_input(INPUT_POST, 'loc');
+		$indices = $indexModel->getIndices($loc);
+		echo json_encode($indices);
 	}
 }
  ?>

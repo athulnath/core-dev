@@ -21,12 +21,20 @@ class MysqlSingleton {
 		$this->_conn->setAttribute(\PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION);
 	}
 
-	public function exec($query) {
+	public function execOne($query) {
 		$stmt = $this->_conn->prepare($query); 
     	$stmt->execute();
     	// set the resulting array to associative
     	$stmt->setFetchMode(\PDO::FETCH_ASSOC); 
     	return $stmt->fetch();
+	}
+
+	public function exec($query) {
+		$stmt = $this->_conn->prepare($query); 
+    	$stmt->execute();
+    	// set the resulting array to associative
+    	$stmt->setFetchMode(\PDO::FETCH_ASSOC); 
+    	return $stmt->fetchAll();
 	}
 
 }

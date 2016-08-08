@@ -4,12 +4,16 @@ namespace App\Helper;
 class AuthenticationHelper {
 
 	public static function isLoggedIn() {
-		session_start();
+		if(!isset($_SESSION)) {
+			session_start();
+		}
 		return isset($_SESSION['user']);
 	}
 
 	public static function loggedOut() {
-		session_start();
+		if(!isset($_SESSION)) {
+			session_start();
+		}
 		session_destroy();
 		return true;
 	}

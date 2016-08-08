@@ -7,17 +7,16 @@
 				<label class="control-label" for="locationform-location">Location</label>
 				<select id="locationform-location" class="form-control" name="LocationForm[location]">
 					<option value="">Select...</option>
-					<option value="1">USA</option>
-					<option value="3">UK</option>	
+					<?php foreach($locations as $loc): ?>
+					<option value="<?php echo $loc['id']; ?>"><?php echo $loc['location']; ?></option>
+					<?php endforeach; ?>
 				</select>
 				<div class="help-block"></div>
 			</div>
 			<div class="form-group field-locationform-location required">
 				<label class="control-label" for="locationform-location">Index</label>
-				<select id="locationform-location" class="form-control" name="LocationForm[location]">
+				<select id="locationform-index" class="form-control" name="LocationForm[location]">
 					<option value="">Select...</option>
-					<option value="1">sdfdf</option>
-					<option value="3">asdfsdf</option>	
 				</select>
 				<div class="help-block"></div>
 			</div>
