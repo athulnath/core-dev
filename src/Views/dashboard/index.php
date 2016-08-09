@@ -21,7 +21,8 @@
 				<div class="help-block"></div>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-success">Go</button>	    
+				<button type="submit" class="btn btn-success">Go</button>
+				<span id="locationform-loader"></span>
 			</div>
 		</form>
 			</div>
@@ -42,16 +43,11 @@
 	    <p></p>
 
 	    <div id="w1" class="grid-view">
-			<table class="table table-striped table-bordered">
+			<table class="table table-striped table-bordered" id="shares-tbl">
 				<thead>
-					<tr><th><a href="/share/index?sort=order" data-sort="order">Insert to row number</a></th><th><a href="/share/index?sort=share_name" data-sort="share_name">Share Name</a></th><th><a href="/share/index?sort=symbol" data-sort="symbol">Symbol</a></th><th><a href="/share/index?sort=price_initiated" data-sort="price_initiated">Price Initiated</a></th><th><a href="/share/index?sort=recommendation" data-sort="recommendation">recommendation</a></th><th class="action-column">&nbsp;</th></tr><tr id="w1-filters" class="filters"><td><input type="text" class="form-control" name="ShareSearch[order]"></td><td><input type="text" class="form-control" name="ShareSearch[share_name]"></td><td><input type="text" class="form-control" name="ShareSearch[symbol]"></td><td><input type="text" class="form-control" name="ShareSearch[price_initiated]"></td><td><input type="text" class="form-control" name="ShareSearch[recommendation]"></td><td>&nbsp;</td></tr>
+					<tr><th><a href="/share/index?sort=order" data-sort="order">Insert to row number</a></th><th><a href="/share/index?sort=share_name" data-sort="share_name">Share Name</a></th><th><a href="/share/index?sort=symbol" data-sort="symbol">Symbol</a></th><th><a href="/share/index?sort=price_initiated" data-sort="price_initiated">Price Initiated</a></th><th><a href="/share/index?sort=recommendation" data-sort="recommendation">recommendation</a></th><th class="action-column">&nbsp;</th></tr>
 				</thead>
 				<tbody>
-					<tr data-key="25"><td>1</td><td>aaa</td><td>AAA</td><td>23</td><td>SELL</td><td><a href="/share/view?id=25" title="View" aria-label="View" data-pjax="0"><span class="glyphicon glyphicon-eye-open"></span></a> <a href="/share/update?id=25" title="Update" aria-label="Update" data-pjax="0"><span class="glyphicon glyphicon-pencil"></span></a> <a href="/share/delete?id=25" title="Delete" aria-label="Delete" data-confirm="Are you sure you want to delete this item?" data-method="post" data-pjax="0"><span class="glyphicon glyphicon-trash"></span></a></td></tr>
-
-					<tr data-key="26"><td>2</td><td>newvalu</td><td>NEW</td><td>324</td><td>EXIT</td><td><a href="/share/view?id=26" title="View" aria-label="View" data-pjax="0"><span class="glyphicon glyphicon-eye-open"></span></a> <a href="/share/update?id=26" title="Update" aria-label="Update" data-pjax="0"><span class="glyphicon glyphicon-pencil"></span></a> <a href="/share/delete?id=26" title="Delete" aria-label="Delete" data-confirm="Are you sure you want to delete this item?" data-method="post" data-pjax="0"><span class="glyphicon glyphicon-trash"></span></a></td></tr>
-					
-					<tr data-key="27"><td>3</td><td>asdf</td><td>ASDF</td><td>23423</td><td>SELL</td><td><a href="/share/view?id=27" title="View" aria-label="View" data-pjax="0"><span class="glyphicon glyphicon-eye-open"></span></a> <a href="/share/update?id=27" title="Update" aria-label="Update" data-pjax="0"><span class="glyphicon glyphicon-pencil"></span></a> <a href="/share/delete?id=27" title="Delete" aria-label="Delete" data-confirm="Are you sure you want to delete this item?" data-method="post" data-pjax="0"><span class="glyphicon glyphicon-trash"></span></a></td></tr>
 				</tbody>
 			</table>
 		</div>

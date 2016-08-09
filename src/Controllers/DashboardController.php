@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\Location;
 use App\Models\Index;
+use App\Models\Shares;
 
 class DashboardController extends Controller {
 
@@ -23,6 +24,13 @@ class DashboardController extends Controller {
 		$loc = filter_input(INPUT_POST, 'loc');
 		$indices = $indexModel->getIndices($loc);
 		echo json_encode($indices);
+	}
+
+	public function shares() {
+		$shareModel = new Shares();
+		$index_id = filter_input(INPUT_POST, 'index_id');
+		$shares = $shareModel->getShares($index_id);
+		echo json_encode($shares);
 	}
 }
  ?>

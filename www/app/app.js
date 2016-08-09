@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	window.App.DashBoard.loadIndex();
+	window.App.DashBoard.bindEvents();
 });

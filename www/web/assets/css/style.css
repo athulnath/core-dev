@@ -20,3 +20,11 @@ body {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
+
+.loading {
+    width: 43px;
+    height: 11px;
+    background:transparent url('../img/ajax-loader.gif') no-repeat 0 0;
+    font-size: 0px;
+    display: inline-block;
+}

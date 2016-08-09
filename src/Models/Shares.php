@@ -11,5 +11,10 @@ class Shares {
 		$this->_dbInstance = MysqlSingleton::getInstance();
 		$this->_dbInstance->init();
 	}
+
+	public function getShares($indexId) {
+		return $this->_dbInstance->exec("select * from `shares` 
+			where index_id=$indexId");
+	}
 }
  ?>
