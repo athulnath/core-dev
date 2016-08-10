@@ -71,29 +71,29 @@
           <div class="share-create">
 			<div class="share-form">
 
-				<form id="w0" action="/share/create" method="post">
+				<form id="createshare-form" action="/test" method="post">
 					<input type="hidden" name="_csrf" value="OTZDek5qeFh6ZXc.NiAxFgByCBUnJCErQ0UPEQQIPyFhRQ0NCyECEA==">
 					    <div class="form-group field-share-share_name">
 					<label class="control-label" for="share-share_name">Share Name</label>
-					<input type="text" id="share-share_name" class="form-control" name="Share[share_name]" maxlength="100">
+					<input type="text" id="createshare-name" class="form-control" name="Share[share_name]" maxlength="100">
 
 					<div class="help-block"></div>
 					</div>
 					    <div class="form-group field-share-symbol">
 					<label class="control-label" for="share-symbol">Symbol</label>
-					<input type="text" id="share-symbol" class="form-control" name="Share[symbol]" maxlength="32">
+					<input type="text" id="createshare-symbol" class="form-control" name="Share[symbol]" maxlength="32">
 
 					<div class="help-block"></div>
 					</div>
 					    <div class="form-group field-share-price_initiated">
 					<label class="control-label" for="share-price_initiated">Price Initiated</label>
-					<input type="text" id="share-price_initiated" class="form-control" name="Share[price_initiated]">
+					<input type="text" id="createshare-price_initiated" class="form-control" name="Share[price_initiated]">
 
 					<div class="help-block"></div>
 					</div>
 					<div class="form-group field-share-recommendation">
 					<label class="control-label" for="share-recommendation">Recommendation</label>
-					<select id="share-recommendation" class="form-control" name="Share[recommendation]">
+					<select id="createshare-recommendation" class="form-control" name="Share[recommendation]">
 					<option value="">Select...</option>
 					<option value="0">BUY</option>
 					<option value="1">SELL</option>
@@ -104,19 +104,15 @@
 					</div>
 					    <div class="form-group field-share-order">
 					<label class="control-label" for="share-order">Insert to row number</label>
-					<input type="text" id="share-order" class="form-control" name="Share[order]">
+					<input type="text" id="createshare-order" class="form-control" name="Share[order]">
 
 					<div class="help-block"></div>
 					</div>
 					    <div class="form-group field-share-location_id">
 
-					<input type="hidden" id="share-location_id" class="form-control" name="Share[location_id]" value="1">
-
 					<div class="help-block"></div>
 					</div>
 					    <div class="form-group field-share-index">
-
-					<input type="hidden" id="share-index" class="form-control" name="Share[index]" value="5">
 
 					<div class="help-block"></div>
 					</div>    

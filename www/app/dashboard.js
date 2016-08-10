@@ -8,6 +8,7 @@ App = (function(App) {
 	function bindEvents() {
 		$("#locationform-location").on("change", _getIndex);
 		$("#location-form").on("submit", _getShares);
+		$("#createshare-form").on("submit", _createShares);
 	}
 
 	function _getIndex(event) {
@@ -59,10 +60,11 @@ App = (function(App) {
 			$('#locationform-loader').removeClass("loading");	
 		}
 		var html = '';
-		$('#shares-tbl tbody tr').empty();
+		$('#shares-tbl').find('tr:gt(0)').empty();
 		shares.forEach(function(obj) {
 			html += '<tr> \
-			<td>1</td><td>' + obj.name+ '</td> \
+			<td>'+ obj.order + '</td>\
+			<td>' + obj.name+ '</td> \
 			<td>' + obj.symbol + '</td> \
 			<td>' + obj.price_initiated +'</td> \
 			<td>' + obj.recommendation + '</td> \
@@ -79,8 +81,36 @@ App = (function(App) {
 
 	}
 
+	function _createShares(event) {
+		$('#shareform-loader').addClass("loading");
+		var index_id = $("#locationform-index").val();
+		var name = $("#createshare-name").val();
+		var symbol = $("#createshare-symbol").val();
+		var price_initiated = $("#createshare-price_initiated").val();
+		var recommendation = $("#createshare-recommendation").val();
+		var order = $("#createshare-order").val();
 
+		$.ajax({
+			url: '/?c=dashboard&a=createshares',
+			method: "POST",
+			data: {
+				index_id: index_id,
+				name: name,
+				symbol: symbol,
+				price_initiated: price_initiated,
+				recommendation: parseInt(recommendation) + 1,
+				order: order
+			}	
+		})
+		.done(_createShareSuccess)
+		.fail(_error);
 
+		event.preventDefault();
+	}
+
+	function _createShareSuccess() {
+		console.log("ok");	
+	}
 
 	App.DashBoard = DashBoard;
 	return App;

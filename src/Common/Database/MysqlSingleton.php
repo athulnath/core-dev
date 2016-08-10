@@ -37,6 +37,11 @@ class MysqlSingleton {
     	return $stmt->fetchAll();
 	}
 
+	public function DML($query) {
+		$this->_conn->query($query); 
+    	return $this->_conn->lastInsertId();
+	}
+
 }
 
  ?>
